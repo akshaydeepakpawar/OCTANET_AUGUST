@@ -1,0 +1,301 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing : border-box;
+}
+body{
+     background: #000;
+     color: #fff;
+}
+.header{
+    height: 85vh;
+    width:100%;
+    padding:10px 13%;
+    background-size: cover;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/header-image.png);
+    background-position: center;
+    position: relative;
+}nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+.logo{
+    width:160px;
+    cursor: pointer;
+}
+
+nav button{
+    outline: 0;
+    border:0;
+    background:#db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor:pointer;
+
+
+}
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding:7px 10px;
+}
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+.header-content{
+    left:50%;
+    top:50%;
+    margin-top: 100px;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%,-50%);
+
+}
+.header-content h1{
+    font-size: 40px;
+    font-weight:900;
+}
+.header-content h3{
+    padding-top:10px ;
+    font-weight: 500;
+    margin-bottom: 50px;
+
+}
+.header-content p{
+    font-size: 20px;
+}
+.email-sign{
+    background: #fff;
+    border-radius: 4px;
+    display:flex;
+    align-items:center;
+    margin-top:30px;
+    overflow:hidden;
+    
+}
+.email-sign input{
+         flex:1;
+         outline:0;
+         border:0;
+         margin-left: 20px;
+}
+.email-sign button{
+    font-size: 20px;
+    outline: 0;
+    background-color: #db0001;
+    border: 0;
+    padding:15px 30px;
+    border:0;
+    outline:0;
+    cursor: pointer;
+
+}
+
+.features{
+    padding:50px 12%;
+    font-size:22px;
+
+}
+.row{
+    display: flex;
+    width:100%;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+}
+.text{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px
+}
+.img-col img{
+    display:block;
+    width:90%;
+    margin:auto;
+}
+.features h2 {
+
+    font-size:50px;
+    font-weight:600;
+    margin-bottom: 20px;
+    
+}
+.faq{
+  font-size: 18px;
+    padding: 10px 12%;
+    text-align: center;
+}
+.faq h2{
+    font-weight:500 ;
+    font-size:40px;
+}
+.quest{
+    margin:60px auto;
+    width:100%;
+    max-width:750px;
+}
+.quest li{
+    list-style: none;
+    width:100%;
+    padding:5px;
+}
+.quest li label{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    font-weight: 500;
+    font-size: 18px;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+
+}
+label ::after{
+   content: '+';
+   font-size: 34px;
+   position: absolute;
+   right:20px;
+   transition:transform 0.5s;
+}
+input[type="radio"]
+{
+    display:none;
+}
+.quest .content{
+    background: #303030;
+    text-align: left;
+    padding:0 20px;
+    max-height: 0;/*so that answer is hidden*/
+    /*so that answer is hidden*/
+    overflow: hidden;
+    transition: max-height 0.5s,padding 0.5s;
+
+
+}
+
+.quest input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+.quest input[type="radio"]:checked + label::after{
+    transform: rotate(135 deg);
+}
+.faq  email-sign{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
+}
+
+.footer{
+    padding:50px 15% 10px;
+    border-top:6px solid #333;
+    color:#777;
+
+}
+.footer h2{
+    font-size:18px;
+    font-weight: 400px;
+    margin-bottom:30px;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display:block;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color:#777;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+
+}
+.footer .language-btn{
+    color:#fff;
+    padding:10px 20px;
+    border-radius: 3px;
+}
+.copyright-text{
+    font-size:14px ;
+    margin-top:20px ;
+    margin-bottom: 10px;
+
+
+}
+/*-------------add media queries for small screen---*/
+@media only screen and (max-width :600px){
+    .logo{
+        width:100px;
+    }
+    nav button{
+        padding:5px 10px ;
+    }
+    nav.language-btn{
+        padding:4px 8px;
+
+    }
+    .header-content{
+        position:unset;
+        transform:none;
+        padding-top: 150px;
+
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .email-sign button{
+        font-size:12px ;
+        padding:10px 15px;
+
+    }.text ,img-col{
+        flex-basis:100px;
+    }
+    .features h2{
+          font-size: 30px;
+    }
+    .features p{
+        font-size: 15px;
+    }
+    .row:nth-child(2),.row:nth-child(4){
+        flex-direction: column-reverse;/*for 2 and 4 row to show text and image in alternate manner in small screen*/
+    }
+    .features .row{
+        padding:10px 0;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .quest  .content{
+        font-size: 14px;
+    }
+    .quest li label{
+        padding:10px;
+        font-size:14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+
+}
